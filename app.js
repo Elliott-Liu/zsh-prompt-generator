@@ -1,4 +1,5 @@
 // https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+// https://medium.com/geekculture/github-pages-with-dynamic-routes-40f512900efa
 
 const json_items = fetch("./items.json")
 	.then((response) => {
@@ -133,9 +134,8 @@ function getCodeInputElement() {
 }
 
 function updateUrlPath(urlPath) {
-	window.history.replaceState(null, "", encodeURIComponent(urlPath));
-}
-
-function getUrlPath() {
-	return window.location.pathname;
+	const origin = window.location.origin;
+	const encodedUrl = encodeURIComponent(urlPath);
+	const path = new URL(`${origin}/${encodedUrl}`);
+	history.replaceState(null, "", path);
 }
