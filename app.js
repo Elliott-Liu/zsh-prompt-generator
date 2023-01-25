@@ -67,7 +67,7 @@ function createListItem(item) {
 function createDiv(id) {
 	const div = document.createElement("div");
 	if (id === "undefined") {
-	div.setAttribute("id", id);
+		div.setAttribute("id", id);
 	}
 	return div;
 }
