@@ -38,16 +38,16 @@
 		</nav>
 		<main>
 			<div class="container pt-5">
-				<div class="row row-cols-3">
-					<div class="col col-2">
-						<div id="items"></div>
+				<div class="row row-cols-auto">
+					<div class="col-4 col-md-2">
+						<div id="items" class="d-flex flex-wrap flex-md-column gap-2"></div>
 					</div>
-					<div class="col col-4">
-						<div>
+					<div class="col-8 col-md-4">
+						<div class="border rounded border-secondary h-100 p-3">
 							<span id="description"></span>
 						</div>
 					</div>
-					<div class="col col-6">
+					<div class="col-12 col-md-6 d-flex flex-column gap-3 pt-4 pt-md-0">
 						<div>
 							<label for="prompt" class="form-label">Prompt</label>
 							<input id="prompt" type="text" class="form-control" readonly />
