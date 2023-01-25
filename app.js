@@ -27,17 +27,12 @@ function createListItems(items, itemsElement) {
 
 function createListItem(item) {
 	const name = item["name"];
-	const description = item["description"];
 	const code = item["code"];
 	const id = item["id"];
-	const href = "#";
 
-	const listItemDiv = createDiv();
-
-	const linkElement = document.createElement("a");
+	const linkElement = document.createElement("button");
 	linkElement.setAttribute("id", id);
-	linkElement.setAttribute("href", href);
-	linkElement.setAttribute("class", "btn btn-outline-primary");
+	linkElement.setAttribute("class", "btn btn-sm btn-outline-secondary");
 	linkElement.setAttribute("data-toggle", "tooltip");
 	linkElement.setAttribute("title", code);
 
@@ -65,8 +60,7 @@ function createListItem(item) {
 		false
 	);
 
-	listItemDiv.appendChild(linkElement);
-	return listItemDiv;
+	return linkElement;
 }
 
 function createDiv(id) {
