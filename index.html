@@ -67,9 +67,9 @@
 		</main>
 	</body>
 	<script>
-		// if (window.location.hash.length > 1) {
-		// 	// const path = window.location.hash.replace("#", "");
-		// 	history.replaceState(null, "", path);
-		// }
+		if (window.location.hash.length > 1) {
+			const path = window.location.hash.replace("#", "");
+			history.replaceState(null, "", path);
+		}
 	</script>
 </html>
